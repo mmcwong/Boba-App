@@ -8,10 +8,15 @@
 
 #import "BAMyRunViewController.h"
 
+@class BARestaurantSearchViewController;
+
 @implementation BAMyRunViewController
 
 - (IBAction)startRunButtonPressed:(id)sender {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    BARestaurantSearchViewController *restaurantSearchViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"BARestaurantSearchViewController"];
     
+    [self presentViewController:(UIViewController *)restaurantSearchViewController animated:YES completion:nil];
 }
 
 @end
