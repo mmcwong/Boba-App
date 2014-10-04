@@ -40,7 +40,7 @@
 
 #pragma mark - User
 
-- (void)registerNewUserWithUseremail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/user", kAPIBaseUrl];
     NSDictionary *parameters = @{@"email":userEmail, @"phone_no":phoneNumber};
     [self.networkManager POST:urlString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {

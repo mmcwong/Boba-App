@@ -16,7 +16,7 @@ typedef void (^PAHTTPClientFailure)(NSError *error);
 + (id)sharedClient;
 
 #pragma mark - User
-- (void)registerNewUserWithUseremail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
+- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
 - (void)getUserDetailsWithUserEmail:(NSString *)userEmail success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
 
 #pragma mark - Group
