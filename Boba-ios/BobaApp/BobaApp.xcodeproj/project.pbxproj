@@ -11,6 +11,8 @@
 		4807DFC419DFD6A400D9C4D6 /* BABoba.m in Sources */ = {isa = PBXBuildFile; fileRef = 4807DFC319DFD6A400D9C4D6 /* BABoba.m */; };
 		4807DFCA19DFD6D100D9C4D6 /* BABobaRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 4807DFC919DFD6D100D9C4D6 /* BABobaRun.m */; };
 		4807DFCD19DFD6E900D9C4D6 /* BAPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 4807DFCC19DFD6E900D9C4D6 /* BAPeople.m */; };
+		4807DFD019DFDFAD00D9C4D6 /* BAProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4807DFCF19DFDFAD00D9C4D6 /* BAProfileManager.m */; };
+		4807DFD619DFE16C00D9C4D6 /* BADefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4807DFD519DFE16C00D9C4D6 /* BADefine.m */; };
 		481A2F5819DFD19400BF4FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F5719DFD19400BF4FC7 /* main.m */; };
 		481A2F5B19DFD19400BF4FC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F5A19DFD19400BF4FC7 /* AppDelegate.m */; };
 		481A2F5E19DFD19400BF4FC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F5D19DFD19400BF4FC7 /* ViewController.m */; };
@@ -50,6 +52,10 @@
 		4807DFC919DFD6D100D9C4D6 /* BABobaRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BABobaRun.m; path = Model/BABobaRun.m; sourceTree = "<group>"; };
 		4807DFCB19DFD6E900D9C4D6 /* BAPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAPeople.h; path = Model/BAPeople.h; sourceTree = "<group>"; };
 		4807DFCC19DFD6E900D9C4D6 /* BAPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAPeople.m; path = Model/BAPeople.m; sourceTree = "<group>"; };
+		4807DFCE19DFDFAD00D9C4D6 /* BAProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAProfileManager.h; path = Model/BAProfileManager.h; sourceTree = "<group>"; };
+		4807DFCF19DFDFAD00D9C4D6 /* BAProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAProfileManager.m; path = Model/BAProfileManager.m; sourceTree = "<group>"; };
+		4807DFD419DFE16C00D9C4D6 /* BADefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BADefine.h; path = Model/BADefine.h; sourceTree = "<group>"; };
+		4807DFD519DFE16C00D9C4D6 /* BADefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BADefine.m; path = Model/BADefine.m; sourceTree = "<group>"; };
 		481A2F5219DFD19400BF4FC7 /* BobaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481A2F5619DFD19400BF4FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481A2F5719DFD19400BF4FC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		4807DFBE19DFD61C00D9C4D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4807DFD419DFE16C00D9C4D6 /* BADefine.h */,
+				4807DFD519DFE16C00D9C4D6 /* BADefine.m */,
 				4807DFBF19DFD69000D9C4D6 /* BANetworkClient.h */,
 				4807DFC019DFD69000D9C4D6 /* BANetworkClient.m */,
 				4807DFC219DFD6A400D9C4D6 /* BABoba.h */,
@@ -117,6 +125,8 @@
 				4807DFC919DFD6D100D9C4D6 /* BABobaRun.m */,
 				4807DFCB19DFD6E900D9C4D6 /* BAPeople.h */,
 				4807DFCC19DFD6E900D9C4D6 /* BAPeople.m */,
+				4807DFCE19DFDFAD00D9C4D6 /* BAProfileManager.h */,
+				4807DFCF19DFDFAD00D9C4D6 /* BAProfileManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,6 +385,7 @@
 				4807DFCA19DFD6D100D9C4D6 /* BABobaRun.m in Sources */,
 				E71881F619DFE98C00F155E0 /* BARestaurantSearchViewController.m in Sources */,
 				481A2F5E19DFD19400BF4FC7 /* ViewController.m in Sources */,
+				4807DFD619DFE16C00D9C4D6 /* BADefine.m in Sources */,
 				481A2F8419DFD49100BF4FC7 /* BACurrentRunViewController.m in Sources */,
 				481A2F7E19DFD46800BF4FC7 /* BALoginViewController.m in Sources */,
 				4807DFCD19DFD6E900D9C4D6 /* BAPeople.m in Sources */,
@@ -385,6 +396,7 @@
 				481A2F5B19DFD19400BF4FC7 /* AppDelegate.m in Sources */,
 				481A2F5819DFD19400BF4FC7 /* main.m in Sources */,
 				481A2F8D19DFD4CE00BF4FC7 /* BAMenuViewController.m in Sources */,
+				4807DFD019DFDFAD00D9C4D6 /* BAProfileManager.m in Sources */,
 				481A2F9019DFD4DF00BF4FC7 /* BAPeopleViewController.m in Sources */,
 				481A2F8719DFD4A000BF4FC7 /* BAMyRunViewController.m in Sources */,
 			);
