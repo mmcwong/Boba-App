@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePB-qj-C8f">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePB-qj-C8f">
                                 <rect key="frame" x="252" y="297" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="iVY-dh-use"/>
@@ -35,7 +36,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMf-Q5-aBJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMf-Q5-aBJ">
                                 <rect key="frame" x="252" y="221" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="9F3-SC-T2s"/>
@@ -53,7 +54,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oX-ax-D8p">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oX-ax-D8p">
                                 <rect key="frame" x="174" y="426" width="82" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="Ici-qC-r1X"/>
@@ -72,7 +73,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-wA-tqe">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-wA-tqe">
                                 <rect key="frame" x="341" y="426" width="68" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="AR6-x4-Yba"/>
@@ -111,7 +112,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTg-L9-F5y">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTg-L9-F5y">
                                 <rect key="frame" x="277" y="363" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="HJp-yK-r4V"/>
@@ -161,12 +162,12 @@
                                 <exclude reference="hTd-XA-7mp"/>
                                 <exclude reference="DBk-v2-Zbr"/>
                                 <exclude reference="Lmp-xC-MpO"/>
+                                <exclude reference="X3B-nI-oEr"/>
+                                <exclude reference="t3W-FZ-yrM"/>
                                 <exclude reference="V33-am-osk"/>
                                 <exclude reference="ZWa-x5-kRo"/>
                                 <exclude reference="c7R-Sx-vzp"/>
                                 <exclude reference="lan-eW-nLx"/>
-                                <exclude reference="X3B-nI-oEr"/>
-                                <exclude reference="t3W-FZ-yrM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -182,12 +183,12 @@
                                 <include reference="hTd-XA-7mp"/>
                                 <include reference="DBk-v2-Zbr"/>
                                 <include reference="Lmp-xC-MpO"/>
+                                <include reference="X3B-nI-oEr"/>
+                                <include reference="t3W-FZ-yrM"/>
                                 <include reference="V33-am-osk"/>
                                 <include reference="ZWa-x5-kRo"/>
                                 <include reference="c7R-Sx-vzp"/>
                                 <include reference="lan-eW-nLx"/>
-                                <include reference="X3B-nI-oEr"/>
-                                <include reference="t3W-FZ-yrM"/>
                             </mask>
                         </variation>
                     </view>
@@ -205,6 +206,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CcW-vL-7FE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1SK-5N-daa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3H0-pA-CfF">
@@ -286,13 +288,13 @@
                                 <exclude reference="88E-FF-EBY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IXa-jN-T6h"/>
                                 <exclude reference="2LE-gg-I0G"/>
                                 <exclude reference="3Sb-Ff-EEi"/>
                                 <exclude reference="hLt-H4-1Cc"/>
                                 <exclude reference="Lpy-xo-rQT"/>
                                 <exclude reference="n9x-h0-JKT"/>
                                 <exclude reference="vY4-lo-vxt"/>
-                                <exclude reference="IXa-jN-T6h"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -301,13 +303,13 @@
                                 <include reference="88E-FF-EBY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IXa-jN-T6h"/>
                                 <include reference="2LE-gg-I0G"/>
                                 <include reference="3Sb-Ff-EEi"/>
                                 <include reference="hLt-H4-1Cc"/>
                                 <include reference="Lpy-xo-rQT"/>
                                 <include reference="n9x-h0-JKT"/>
                                 <include reference="vY4-lo-vxt"/>
-                                <include reference="IXa-jN-T6h"/>
                             </mask>
                         </variation>
                     </view>
@@ -326,6 +328,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wuf-7Q-Mzi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aPQ-B9-GeM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-43-fmo">
@@ -349,10 +352,10 @@
                                 <exclude reference="Se8-43-fmo"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0Ek-IL-eSW"/>
                                 <exclude reference="6bc-m8-RP0"/>
                                 <exclude reference="kB9-p8-s8E"/>
                                 <exclude reference="rkn-eX-b1u"/>
-                                <exclude reference="0Ek-IL-eSW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -360,10 +363,10 @@
                                 <include reference="Se8-43-fmo"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="0Ek-IL-eSW"/>
                                 <include reference="6bc-m8-RP0"/>
                                 <include reference="kB9-p8-s8E"/>
                                 <include reference="rkn-eX-b1u"/>
-                                <include reference="0Ek-IL-eSW"/>
                             </mask>
                         </variation>
                     </view>
