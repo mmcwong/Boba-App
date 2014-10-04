@@ -6,21 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 
 
 public class MainActivity extends FragmentActivity {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
-    private NavigationDrawerFragment mNavigationDrawerFragment;
-
-
-    private CharSequence mTitle;
-    // Declare Tab Variable
-    ActionBar.Tab Tab1, Tab2, Tab3;
     MyRunsFragment myRunsFragment;
     CurrentRunsFragment currentRunsFragment;
     DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
@@ -33,7 +23,6 @@ public class MainActivity extends FragmentActivity {
         myRunsFragment = MyRunsFragment.newInstance();
         currentRunsFragment = CurrentRunsFragment.newInstance();
 
-        mTitle = getTitle();
 
 //        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
 //            @Override
@@ -116,7 +105,7 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public int getCount() {
-            return 100;
+            return 2;
         }
 
         @Override

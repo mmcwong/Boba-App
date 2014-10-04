@@ -5,4 +5,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="TestTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/TestActionBar</item>
+    </style>
+
+    <style name="TestActionBar" parent="android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:displayOptions">useLogo</item>
+    </style>
 </resources>

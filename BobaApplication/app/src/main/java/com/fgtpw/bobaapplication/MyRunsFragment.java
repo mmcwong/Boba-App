@@ -1,6 +1,5 @@
 package com.fgtpw.bobaapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,8 +11,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.fgtpw.bobaapplication.search.SearchFragment;
-
-import java.util.List;
 
 public class MyRunsFragment extends Fragment {
 
@@ -27,7 +24,7 @@ public class MyRunsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.myruns,container,false);
+        View root = inflater.inflate(R.layout.myruns, container, false);
         Button create = (Button) root.findViewById(R.id.myruns_create);
         create.setOnClickListener(new View.OnClickListener() {
             @Override

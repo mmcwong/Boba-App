@@ -31,8 +31,6 @@ public class CurrentRunsFragment extends Fragment {
         ArrayList<String> data = new ArrayList<String>();
         data.add("Boba");
         data.add("Chicken");
-
-
         list.setAdapter(new CurrentRunsAdapter(data, getActivity(),getFragmentManager()));
         return root;
     }

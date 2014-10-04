@@ -23,7 +23,7 @@ public class SearchFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        linearLayout = (LinearLayout)inflater.inflate(R.layout.search, null);
+        linearLayout = (LinearLayout)inflater.inflate(R.layout.search, container,false);
 
         final SearchListView searchListView = (SearchListView)linearLayout.findViewById(R.id.search_list_view);
 
