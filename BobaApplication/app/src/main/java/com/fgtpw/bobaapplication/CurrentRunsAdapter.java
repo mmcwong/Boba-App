@@ -61,6 +61,8 @@ public class CurrentRunsAdapter extends BaseAdapter {
         restname.setText("Tearra");
         exptime.setText("30 min left");
 
+        face.setImageResource(R.drawable.stanley);
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

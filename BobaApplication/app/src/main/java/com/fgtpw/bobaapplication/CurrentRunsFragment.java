@@ -26,12 +26,22 @@ public class CurrentRunsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.currentruns,container,false);
+        View root = inflater.inflate(R.layout.currentruns, container, false);
         ListView list = (ListView) root.findViewById(R.id.currentruns_list);
         ArrayList<String> data = new ArrayList<String>();
         data.add("Boba");
         data.add("Chicken");
-        list.setAdapter(new CurrentRunsAdapter(data,getActivity()));
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+        data.add("Chicken");
+
+
+        list.setAdapter(new CurrentRunsAdapter(data, getActivity()));
         return root;
     }
 }

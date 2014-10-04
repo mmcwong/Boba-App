@@ -4,7 +4,7 @@
     <string name="app_name">BobaApplication</string>
     <string name="title_section1">Current Runs</string>
     <string name="title_section2">My Runs</string>
-    <string name="title_section3">Settings</string>
+    <string name="title_section3">Search</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
