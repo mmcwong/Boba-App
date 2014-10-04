@@ -1,5 +1,4 @@
 Boba-App
 ========
 
-boba app
-CALHACKSSSS
+boba app!
