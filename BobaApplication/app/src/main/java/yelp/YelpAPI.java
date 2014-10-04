@@ -33,7 +33,7 @@ public class YelpAPI {
     private static final String API_HOST = "api.yelp.com";
     private static final String DEFAULT_TERM = "boba";
     private static final String DEFAULT_LOCATION = "Mountain View, CA";
-    private static final int SEARCH_LIMIT = 5;
+    private static final int SEARCH_LIMIT = 10;
     private static final String SEARCH_PATH = "/v2/search";
     private static final String BUSINESS_PATH = "/v2/business";
 
@@ -120,16 +120,9 @@ public class YelpAPI {
         return response.getBody();
     }
 
-    /**
-     * Queries the Search API based on the command line arguments and takes the first result to query
-     * the Business API.
-     *
-     * @param yelpApi    <tt>YelpAPI</tt> service instance
-     * @param yelpApiCli <tt>YelpAPICLI</tt> command line arguments
-     */
-    private static List<Business> queryAPI(YelpAPI yelpApi, YelpAPICLI yelpApiCli) {
+    private static List<Business> queryAPI(YelpAPI yelpApi, String term) {
         String searchResponseJSON =
-                yelpApi.searchForBusinessesByLocation(yelpApiCli.term, yelpApiCli.location);
+                yelpApi.searchForBusinessesByLocation(term, "Mountain View");
 
         JSONParser parser = new JSONParser();
         JSONObject response = null;
@@ -195,9 +188,9 @@ public class YelpAPI {
      */
     public static List<Business> run(String[] args) {
         YelpAPICLI yelpApiCli = new YelpAPICLI();
-        new JCommander(yelpApiCli, args);
+        new JCommander(yelpApiCli);
 
         YelpAPI yelpApi = new YelpAPI(CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET);
-        return queryAPI(yelpApi, yelpApiCli);
+        return queryAPI(yelpApi, args[0]);
     }
 }
