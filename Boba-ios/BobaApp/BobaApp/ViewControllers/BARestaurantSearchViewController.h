@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BARestaurantSearchViewController : UIViewController
+@interface BARestaurantSearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *restaurantSearchBar;
+@property (weak, nonatomic) IBOutlet UITableView *restaurantSearchTableView;
 
 @end

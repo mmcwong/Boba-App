@@ -10,4 +10,6 @@
 
 @interface BAMenuViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *menuTableView;
+
 @end

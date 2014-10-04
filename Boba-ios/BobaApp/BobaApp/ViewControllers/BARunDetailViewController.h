@@ -10,4 +10,9 @@
 
 @interface BARunDetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *runHostImageView;
+@property (weak, nonatomic) IBOutlet UILabel *runHostLabel;
+@property (weak, nonatomic) IBOutlet UIButton *peopleButton;
+@property (weak, nonatomic) IBOutlet UIButton *orderButton;
+
 @end

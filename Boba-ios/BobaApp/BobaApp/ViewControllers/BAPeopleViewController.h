@@ -10,4 +10,6 @@
 
 @interface BAPeopleViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *peopleTableView;
+
 @end

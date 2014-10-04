@@ -10,4 +10,7 @@
 
 @interface BARestaurantOrderViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *orderTimeButton;
+@property (weak, nonatomic) IBOutlet UITableView *restaurantOrderTableView;
+
 @end

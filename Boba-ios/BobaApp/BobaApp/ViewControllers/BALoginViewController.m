@@ -7,6 +7,7 @@
 //
 
 #import "BALoginViewController.h"
+#import "Helpers.h"
 
 @class BAMainTabBarController;
 
@@ -16,7 +17,7 @@
     // Validate username/password
     // Push MainTabBarController
     
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIStoryboard *mainStoryboard = [Helpers getMainStoryboard];
     BAMainTabBarController *mainTabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"BAMainTabBarController"];
     
     [self presentViewController:(UIViewController *)mainTabBarController animated:YES completion:nil];

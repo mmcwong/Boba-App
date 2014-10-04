@@ -7,7 +7,11 @@
 //
 
 #import "BARunDetailViewController.h"
+#import <UIKit/UIKit.h>
 
 @implementation BARunDetailViewController
+
+- (void)viewDidLoad {
+}
 
 @end

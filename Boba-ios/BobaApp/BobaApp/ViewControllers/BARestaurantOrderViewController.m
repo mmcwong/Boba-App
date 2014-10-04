@@ -8,10 +8,6 @@
 
 #import "BARestaurantOrderViewController.h"
 
-@interface BARestaurantOrderViewController ()
-
-@end
-
 @implementation BARestaurantOrderViewController
 
 - (void)viewDidLoad {

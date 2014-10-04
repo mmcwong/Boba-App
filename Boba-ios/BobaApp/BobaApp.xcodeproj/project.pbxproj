@@ -31,6 +31,7 @@
 		E71881F319DFDD5D00F155E0 /* BobaAppAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71881F219DFDD5D00F155E0 /* BobaAppAssets.xcassets */; };
 		E71881F619DFE98C00F155E0 /* BARestaurantSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881F519DFE98C00F155E0 /* BARestaurantSearchViewController.m */; };
 		E71881F919DFE9A500F155E0 /* BARestaurantOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881F819DFE9A500F155E0 /* BARestaurantOrderViewController.m */; };
+		E71881FE19DFFE8800F155E0 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881FD19DFFE8800F155E0 /* Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		E71881F519DFE98C00F155E0 /* BARestaurantSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARestaurantSearchViewController.m; path = ViewControllers/BARestaurantSearchViewController.m; sourceTree = "<group>"; };
 		E71881F719DFE9A500F155E0 /* BARestaurantOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BARestaurantOrderViewController.h; path = ViewControllers/BARestaurantOrderViewController.h; sourceTree = "<group>"; };
 		E71881F819DFE9A500F155E0 /* BARestaurantOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARestaurantOrderViewController.m; path = ViewControllers/BARestaurantOrderViewController.m; sourceTree = "<group>"; };
+		E71881FC19DFFE8800F155E0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = Helpers/Helpers.h; sourceTree = "<group>"; };
+		E71881FD19DFFE8800F155E0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = Helpers/Helpers.m; sourceTree = "<group>"; };
 		F313D71261BA4AD6378D0641 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,8 +157,10 @@
 		481A2F5419DFD19400BF4FC7 /* BobaApp */ = {
 			isa = PBXGroup;
 			children = (
+				E71881FB19DFFE6700F155E0 /* Helpers */,
 				E71881F119DFDD1D00F155E0 /* Resources */,
 				4807DFBE19DFD61C00D9C4D6 /* Model */,
+				E71881FA19DFFD7400F155E0 /* View */,
 				481A2F7B19DFD44A00BF4FC7 /* ViewController */,
 				481A2F5919DFD19400BF4FC7 /* AppDelegate.h */,
 				481A2F5A19DFD19400BF4FC7 /* AppDelegate.m */,
@@ -243,6 +248,22 @@
 				E71881F219DFDD5D00F155E0 /* BobaAppAssets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E71881FA19DFFD7400F155E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E71881FB19DFFE6700F155E0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E71881FC19DFFE8800F155E0 /* Helpers.h */,
+				E71881FD19DFFE8800F155E0 /* Helpers.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +405,7 @@
 				481A2F8A19DFD4BC00BF4FC7 /* BARunDetailViewController.m in Sources */,
 				4807DFCA19DFD6D100D9C4D6 /* BABobaRun.m in Sources */,
 				E71881F619DFE98C00F155E0 /* BARestaurantSearchViewController.m in Sources */,
+				E71881FE19DFFE8800F155E0 /* Helpers.m in Sources */,
 				481A2F5E19DFD19400BF4FC7 /* ViewController.m in Sources */,
 				4807DFD619DFE16C00D9C4D6 /* BADefine.m in Sources */,
 				481A2F8419DFD49100BF4FC7 /* BACurrentRunViewController.m in Sources */,

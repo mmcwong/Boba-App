@@ -7,31 +7,38 @@
 //
 
 #import "BARestaurantSearchViewController.h"
+#import "Helpers.h"
 
-@interface BARestaurantSearchViewController ()
+NSString *const kRestaurantSearchTableViewCellId = @"restaurantSearchTableViewCell";
 
-@end
+@class BARestaurantOrderViewController;
 
 @implementation BARestaurantSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.restaurantSearchTableView.delegate = self;
+    self.restaurantSearchTableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kRestaurantSearchTableViewCellId];
+    cell.textLabel.text = @"BITCH";
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [Helpers getMainStoryboard];
+    BARestaurantOrderViewController *restaurantOrderViewController = [storyboard instantiateViewControllerWithIdentifier:@"BARestaurantOrderViewController"];
+    [self.navigationController pushViewController:(UIViewController *)restaurantOrderViewController animated:YES];
+}
 
 @end

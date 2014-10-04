@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BACurrentRunViewController : UIViewController
+@interface BACurrentRunViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *currentRunTableView;
 
 @end
