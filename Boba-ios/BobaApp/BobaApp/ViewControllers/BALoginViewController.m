@@ -8,18 +8,25 @@
 
 #import "BALoginViewController.h"
 
+@class BAMainTabBarController;
+
 @implementation BALoginViewController
 
 - (IBAction)loginButtonPressed:(id)sender {
     // Validate username/password
     // Push MainTabBarController
+    
+    UIStoryboard *tabBarStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    BAMainTabBarController *mainTabBarController = [tabBarStoryboard instantiateViewControllerWithIdentifier:@"BAMainTabBarController"];
+    
+    [self presentViewController:(UIViewController *)mainTabBarController animated:YES completion:nil];
 }
 
 - (IBAction)loginWithFacebookPressed:(id)sender {
     
 }
 
-- (IBAction)loginWithGooglePressed:(id)sender:(id)sender {
+- (IBAction)loginWithGooglePressed:(id)sender {
     
 }
 

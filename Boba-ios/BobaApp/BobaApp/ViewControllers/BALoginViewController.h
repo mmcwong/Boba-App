@@ -10,11 +10,11 @@
 
 @interface BALoginViewController : UIViewController
 
-@property (weak) UITextField IBOutlet *usernameField;
-@property (weak) UITextField IBOutlet *passwordField;
-@property (weak) UIButton IBOutlet *loginButton;
-@property (weak) UIButton IBOutlet *loginWithFacebook;
-@property (weak) UIButton IBOutlet *loginWithGoogle;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginWithFacebook;
+@property (weak, nonatomic) IBOutlet UIButton *loginWithGoogle;
 
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)loginWithFacebookPressed:(id)sender;

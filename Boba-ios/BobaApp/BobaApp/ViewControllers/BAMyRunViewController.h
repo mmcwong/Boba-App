@@ -10,4 +10,6 @@
 
 @interface BAMyRunViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *startRunButton;
+
 @end

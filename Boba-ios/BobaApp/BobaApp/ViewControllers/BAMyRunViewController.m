@@ -10,4 +10,8 @@
 
 @implementation BAMyRunViewController
 
+- (IBAction)startRunButtonPressed:(id)sender {
+    
+}
+
 @end
