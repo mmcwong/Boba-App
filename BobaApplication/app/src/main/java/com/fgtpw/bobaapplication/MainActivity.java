@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import com.fgtpw.bobaapplication.search.SearchFragment;
+
 import yelp.YelpAPI;
 
 
@@ -43,13 +45,6 @@ public class MainActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
-            @Override
-            public void run() {
-                YelpAPI.run(new String[]{});
-            }
-        });
     }
 
     @Override
@@ -70,7 +65,7 @@ public class MainActivity extends Activity
                 break;
             case 2:
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                        .replace(R.id.container, new SearchFragment())
                         .commit();
                 break;
         }

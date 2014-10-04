@@ -151,21 +151,35 @@ public class YelpAPI {
 
     private static List<Business> getBusinessesFromJSON(JSONArray jsonBusinesses) {
         List<Business> businesses = new ArrayList<Business>();
-        for(Object obj : jsonBusinesses) {
-            JSONObject jsonBusiness = (JSONObject)obj;
-            String name = jsonBusiness.get("name").toString();
-            String phone = jsonBusiness.get("phone").toString();
-            String image = jsonBusiness.get("image_url").toString();
+        for (Object obj : jsonBusinesses) {
+            JSONObject jsonBusiness = (JSONObject) obj;
+            String name = get(jsonBusiness, "name");
+            String phone = get(jsonBusiness, "phone");
+            String image = get(jsonBusiness, "image_url");
             String address = getAddress(jsonBusiness.get("location"));
-            String rating = jsonBusiness.get("rating_img_url_large").toString();
+            String rating = get(jsonBusiness, "rating_img_url_large");
             businesses.add(new Business(name, phone, address, image, rating));
         }
         return businesses;
     }
 
+    private static String get(JSONObject jsonObject, String key) {
+        Object obj = jsonObject.get(key);
+        if (obj == null) {
+            return "";
+        }
+        return obj.toString();
+    }
+
     private static String getAddress(Object obj) {
-        JSONObject location = (JSONObject)obj;
-        JSONArray display_address = (JSONArray)location.get("display_address");
+        JSONObject location = (JSONObject) obj;
+        if(location == null)
+            return "";
+
+        JSONArray display_address = (JSONArray) location.get("display_address");
+        if(display_address == null)
+            return "";
+
         String address = "";
         for (Object addressObj : display_address) {
             address += addressObj + "\n";
