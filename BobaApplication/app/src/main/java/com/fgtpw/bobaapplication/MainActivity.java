@@ -1,25 +1,30 @@
 package com.fgtpw.bobaapplication;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
+
     private CharSequence mTitle;
     // Declare Tab Variable
     ActionBar.Tab Tab1, Tab2, Tab3;
     MyRunsFragment myRunsFragment;
     CurrentRunsFragment currentRunsFragment;
+    DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
+    ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,28 +42,87 @@ public class MainActivity extends Activity {
 //            }
 //        });
 
-        ActionBar actionBar = getActionBar();
+        mDemoCollectionPagerAdapter =
+                new DemoCollectionPagerAdapter(
+                        getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setOnPageChangeListener(
+                new ViewPager.SimpleOnPageChangeListener() {
+                    @Override
+                    public void onPageSelected(int position) {
+                        // When swiping between pages, select the
+                        // corresponding tab.
+                        getActionBar().setSelectedNavigationItem(position);
+                    }
+                });
+        mViewPager.setAdapter(mDemoCollectionPagerAdapter);
+        final ActionBar actionBar = getActionBar();
 
-        // Hide Actionbar Icon
-        actionBar.setDisplayShowHomeEnabled(false);
-
-        // Hide Actionbar Title
-        actionBar.setDisplayShowTitleEnabled(false);
-
-        // Create Actionbar Tabs
+        // Specify that tabs should be displayed in the action bar.
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        // Set Tab Icon and Titles
-        Tab1 = actionBar.newTab().setText("Current Runs");
-        Tab2 = actionBar.newTab().setText("My Runs");
+        // Create a tab listener that is called when the user changes tabs.
+        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 
-        // Set Tab Listeners
-        Tab1.setTabListener(new TabListener(currentRunsFragment));
-        Tab2.setTabListener(new TabListener(myRunsFragment));
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
 
-        // Add tabs to actionbar
-        actionBar.addTab(Tab1);
-        actionBar.addTab(Tab2);
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+
+            }
+        };
+
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText("Current Runs")
+                        .setTabListener(tabListener));
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText("My Runs")
+                        .setTabListener(tabListener));
 
     }
+
+    public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
+        public DemoCollectionPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int i) {
+            Fragment fragment;
+            switch (i){
+                case 0:
+                    fragment = CurrentRunsFragment.newInstance();
+                    break;
+                case 1:
+                    fragment = MyRunsFragment.newInstance();
+                    break;
+                default:
+                    fragment = CurrentRunsFragment.newInstance();
+
+            }
+
+            return fragment;
+        }
+
+        @Override
+        public int getCount() {
+            return 100;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return "OBJECT " + (position + 1);
+        }
+    }
+
 }

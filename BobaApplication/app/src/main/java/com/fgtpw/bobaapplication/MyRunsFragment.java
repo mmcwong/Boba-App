@@ -1,15 +1,17 @@
 package com.fgtpw.bobaapplication;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.fgtpw.bobaapplication.search.SearchFragment;
 
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class MyRunsFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
-                        .add(R.id.container, RestaurantMenuFragment.newInstance())
+                        .add(R.id.container, SearchFragment.newInstance())
                         .addToBackStack(null)
                         .commit();
             }
