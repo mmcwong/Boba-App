@@ -8,11 +8,33 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
-    <TextView
+    <RelativeLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3"/>
+        android:layout_weight="5"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/run_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Boba"/>
+        <TextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/run_name"
+            android:text="Tearra"/>
+        <TextView
+            android:id="@+id/expiration_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restaurant_name"
+            android:padding="5dp"
+            android:layout_alignLeft="@id/restaurant_name"
+            android:text="00:30 left"/>
+    </RelativeLayout>
+
 </LinearLayout>
