@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 
 var api_url_base = "/api/boba_app";
 
-function getUserEmailHash(email) {
+function hash(x) {
   var shasum = crypto.createHash('sha1');
-  var user_hash = shasum.update(String(email));
+  var user_hash = shasum.update(String(x));
   return user_hash.digest('hex');
 
 }
@@ -28,7 +28,7 @@ app.route(api_url_base + '/user').post(function (req, res) {
   var email = req.body.email || res.send({msg: "Please provide a email in the request body"});
   var name = req.body.name || res.send({msg: "Please provide a name in the request body."});
 
-  var user_key = "users:" + getUserEmailHash(email);
+  var user_key = "users:" + hash(email);
 
   // Store to redis
   redis_client.hmset(user_key , "email", email, "name", name, function(err, replies) {
@@ -49,7 +49,7 @@ app.route(api_url_base + '/user/:email').get(function (req, res) {
   // Get the username
   var email = req.params.email || res.send({ msg: "Please send a url param" });
 
-  redis_client.hmget("users:" + getUserEmailHash(email), 'email', 'name', function(err, replies) {
+  redis_client.hmget("users:" + hash(email), 'email', 'name', function(err, replies) {
     if(err) {
        console.log("Could get user with email: " + email + " " + err);
         res.send({
@@ -65,16 +65,16 @@ app.route(api_url_base + '/user/:email').get(function (req, res) {
   });
 });
 
-app.route(api_url_base + '/group').post(function (req, res) {
-  var group_name = req.body.group_name;
-  var password = req.body.password;
+app.route(api_url_base + '/run').post(function (req, res) {
+  var group_name = req.body.group_name || res.send({ msg: "Please send a group_name param" });
+
   // store to redis
   res.send({
   	msg: "success"
   });
 });
 
-app.route(api_url_base + '/group/:group_name').get(function (req, res) {
+app.route(api_url_base + '/run/:run_name').get(function (req, res) {
   res.send({
   	group_members: [
 		"Bill",
@@ -86,11 +86,19 @@ app.route(api_url_base + '/group/:group_name').get(function (req, res) {
   });
 });
 
-app.route(api_url_base + '/group/:group_name/user').post(function (req, res) {
+app.route(api_url_base + '/run/:run_name/user/add').post(function (req, res) {
   var user_email = req.body.user_email;
   // store to redis
   res.send({
   	msg: "success"
+  });
+});
+
+app.route(api_url_base + '/run/:run_name/user/paid').post(function (req, res) {
+  var user_email = req.body.user_email;
+  // store to redis
+  res.send({
+    msg: "success"
   });
 });
 
