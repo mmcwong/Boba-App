@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 
-var api_url_base = "/api/boba_app"
+var api_url_base = "/api"
 
 app.route(api_url_base + '/user').post(function (req, res) {
   var name = req.body.name;
