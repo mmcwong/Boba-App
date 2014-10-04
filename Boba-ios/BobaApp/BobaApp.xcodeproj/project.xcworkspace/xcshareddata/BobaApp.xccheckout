@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F7AB2DA-A3F8-46C9-8D2C-55E06668CD26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BobaApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>056C656EEA20FB3F5FB40172066F9DCFD79F3C16</key>
+		<string>https://github.com/47mspa/Boba-App</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Boba-ios/BobaApp/BobaApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>056C656EEA20FB3F5FB40172066F9DCFD79F3C16</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/47mspa/Boba-App</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>056C656EEA20FB3F5FB40172066F9DCFD79F3C16</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>056C656EEA20FB3F5FB40172066F9DCFD79F3C16</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Boba-App</string>
+		</dict>
+	</array>
+</dict>
+</plist>
