@@ -23,3 +23,9 @@ Expansions:
 -Showing what your friends got 
 
 
+Structure:
+===========
+
+bobapp: node server
+
+BobaApplication: android app
