@@ -1,18 +1,14 @@
 package com.fgtpw.bobaapplication;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
-import android.text.format.DateUtils;
-import android.text.format.Time;
-import android.util.TimeUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -22,9 +18,11 @@ import java.util.List;
 public class CurrentRunsAdapter extends BaseAdapter {
     List<String> data;
     Context context;
-    public CurrentRunsAdapter(List<String> d , Context c) {
+    FragmentManager fragmentManager;
+    public CurrentRunsAdapter(List<String> d , Context c, FragmentManager manager) {
         data = d;
         context = c;
+        fragmentManager = manager;
     }
 
     @Override
@@ -66,8 +64,10 @@ public class CurrentRunsAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(context,HostOrderPageActivity.class);
-                context.startActivity(i);
+                fragmentManager.beginTransaction()
+                        .add(R.id.container, HostOrderPageFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         return view;

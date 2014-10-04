@@ -20,7 +20,7 @@
         </activity>
 
         <activity
-            android:name=".HostOrderPageActivity"
+            android:name=".HostOrderPageFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".OrderDetailActivity"
+            android:name=".OrderDetailFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RestaurantMenuActivity"
+            android:name=".RestaurantMenuFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

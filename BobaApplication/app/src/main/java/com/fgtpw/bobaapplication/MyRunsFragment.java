@@ -32,8 +32,7 @@ public class MyRunsFragment extends Fragment {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(),StartRunActivity.class);
-                startActivity(i);
+                //TODO: Start search fragment
             }
         });
 

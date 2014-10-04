@@ -41,7 +41,7 @@ public class CurrentRunsFragment extends Fragment {
         data.add("Chicken");
 
 
-        list.setAdapter(new CurrentRunsAdapter(data, getActivity()));
+        list.setAdapter(new CurrentRunsAdapter(data, getActivity(),getFragmentManager()));
         return root;
     }
 }
