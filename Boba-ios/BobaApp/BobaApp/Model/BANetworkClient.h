@@ -9,26 +9,26 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^PAHTTPClientSuccess)(id responseObject);
-typedef void (^PAHTTPClientFailure)(NSError *error);
+typedef void (^BAHTTPClientSuccess)(id responseObject);
+typedef void (^BAHTTPClientFailure)(NSError *error);
 
 @interface BANetworkClient : NSObject
 + (id)sharedClient;
 
 #pragma mark - User
-- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)getUserDetailsWithUserEmail:(NSString *)userEmail success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
+- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)getUserDetailsWithUserEmail:(NSString *)userEmail success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
 
 #pragma mark - Group
-- (void)createNewGroupWithGroupName:(NSString *)groupName groupPassword:(NSString *)groupPassword success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)addNewGroupMemberWithGroupName:(NSString *)groupName userEmail:(NSString *)userEmail success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
+- (void)createNewGroupWithGroupName:(NSString *)groupName groupPassword:(NSString *)groupPassword success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)addNewGroupMemberWithGroupName:(NSString *)groupName userEmail:(NSString *)userEmail success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
 
 #pragma mark - Run
-- (void)getCurrentActiveRunsWithGroupName:(NSString *)groupName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)createNewRunWithGroupName:(NSString *)groupName runName:(NSString *)runName yelpId:(NSString *)yelpId orderTime:(long)orderTime expireTime:(long)expireTime success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)getRunStatusWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)addUserToRunWithUserEmail:(NSString *)userEmail GroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)markRunCompletedWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
-- (void)markUserPaidWithUserEmail:(NSString *)userEmail groupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure;
+- (void)getCurrentActiveRunsWithGroupName:(NSString *)groupName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)createNewRunWithGroupName:(NSString *)groupName runName:(NSString *)runName yelpId:(NSString *)yelpId orderTime:(long)orderTime expireTime:(long)expireTime success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)getRunStatusWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)addUserToRunWithUserEmail:(NSString *)userEmail GroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)markRunCompletedWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
+- (void)markUserPaidWithUserEmail:(NSString *)userEmail groupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure;
 
 @end

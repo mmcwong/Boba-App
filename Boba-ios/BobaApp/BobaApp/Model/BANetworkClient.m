@@ -40,7 +40,7 @@
 
 #pragma mark - User
 
-- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)registerNewUserWithUserEmail:(NSString *)userEmail phoneNumber:(NSString *)phoneNumber success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/user", kAPIBaseUrl];
     NSDictionary *parameters = @{@"email":userEmail, @"phone_no":phoneNumber};
     [self.networkManager POST:urlString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -50,7 +50,7 @@
     }];
 }
 
-- (void)getUserDetailsWithUserEmail:(NSString *)userEmail success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)getUserDetailsWithUserEmail:(NSString *)userEmail success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/user/%@", kAPIBaseUrl, userEmail];
     
     [self.networkManager GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -62,7 +62,7 @@
 
 #pragma mark - Group
 
-- (void)createNewGroupWithGroupName:(NSString *)groupName groupPassword:(NSString *)groupPassword success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)createNewGroupWithGroupName:(NSString *)groupName groupPassword:(NSString *)groupPassword success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group", kAPIBaseUrl];
     NSDictionary *parameters = @{@"group_name":groupName, @"group_password":groupPassword};
     
@@ -74,7 +74,7 @@
     
 }
 
-- (void)addNewGroupMemberWithGroupName:(NSString *)groupName userEmail:(NSString *)userEmail success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)addNewGroupMemberWithGroupName:(NSString *)groupName userEmail:(NSString *)userEmail success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/user", kAPIBaseUrl, groupName];
     NSDictionary *parameters = @{@"user_email":userEmail};
     
@@ -86,7 +86,7 @@
 }
 
 #pragma mark - Run
-- (void)getCurrentActiveRunsWithGroupName:(NSString *)groupName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)getCurrentActiveRunsWithGroupName:(NSString *)groupName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@", kAPIBaseUrl, groupName];
     
     [self.networkManager GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -96,7 +96,7 @@
     }];
 }
 
-- (void)createNewRunWithGroupName:(NSString *)groupName runName:(NSString *)runName yelpId:(NSString *)yelpId orderTime:(long)orderTime expireTime:(long)expireTime success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)createNewRunWithGroupName:(NSString *)groupName runName:(NSString *)runName yelpId:(NSString *)yelpId orderTime:(long)orderTime expireTime:(long)expireTime success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/run", kAPIBaseUrl, groupName];
     NSDictionary *parameters = @{@"run_name":runName,
                                  @"yelp_id":yelpId,
@@ -110,7 +110,7 @@
     }];
 }
 
-- (void)getRunStatusWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)getRunStatusWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/run/%@", kAPIBaseUrl, groupName, runName];
     
     [self.networkManager GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -120,7 +120,7 @@
     }];
 }
 
-- (void)addUserToRunWithUserEmail:(NSString *)userEmail GroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)addUserToRunWithUserEmail:(NSString *)userEmail GroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/run/%@/user", kAPIBaseUrl, groupName, runName];
     NSDictionary *parameters = @{@"user_id":userEmail};
     
@@ -131,7 +131,7 @@
     }];
 }
 
-- (void)markRunCompletedWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)markRunCompletedWithGroupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/run/%@/complete", kAPIBaseUrl, groupName, runName];
     
     [self.networkManager POST:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -141,7 +141,7 @@
     }];
 }
 
-- (void)markUserPaidWithUserEmail:(NSString *)userEmail groupName:(NSString *)groupName runName:(NSString *)runName success:(PAHTTPClientSuccess)success failure:(PAHTTPClientFailure)failure {
+- (void)markUserPaidWithUserEmail:(NSString *)userEmail groupName:(NSString *)groupName runName:(NSString *)runName success:(BAHTTPClientSuccess)success failure:(BAHTTPClientFailure)failure {
     NSString *urlString = [NSString stringWithFormat:@"%@/group/%@/run/%@/paid" ,kAPIBaseUrl, groupName, runName];
     // user who paid
     NSDictionary *parameters = @{@"user_id":userEmail};
