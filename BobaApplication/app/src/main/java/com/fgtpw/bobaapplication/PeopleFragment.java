@@ -28,6 +28,6 @@ public class PeopleFragment extends Fragment {
         View root = inflater.inflate(R.layout.people, container, false);
         ListView people = (ListView) root.findViewById(R.id.people_listView);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return root;
     }
 }

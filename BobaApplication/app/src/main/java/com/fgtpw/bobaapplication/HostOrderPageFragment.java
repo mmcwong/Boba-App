@@ -42,7 +42,7 @@ public class HostOrderPageFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 fragmentManager.beginTransaction()
-                        .add(R.id.container, OrderDetailFragment.newInstance())
+                        .add(R.id.container, RestaurantMenuFragment.newInstance())
                         .addToBackStack(null)
                         .commit();
             }

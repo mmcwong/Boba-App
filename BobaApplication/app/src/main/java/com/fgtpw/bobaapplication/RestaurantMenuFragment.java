@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 /**
  * Created by sfung on 10/3/14.
@@ -22,7 +24,11 @@ public class RestaurantMenuFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-              View root = inflater.inflate(R.layout.ordermenu, container, false);
-        return super.onCreateView(inflater,container,savedInstanceState);
+        View root = inflater.inflate(R.layout.ordermenu, container, false);
+        TextView title = (TextView) root.findViewById(R.id.rest_menu_title);
+        title.setText("Tearra");
+        ExpandableListView listView = (ExpandableListView) root.findViewById(R.id.rest_menu_list);
+
+        return root;
     }
 }
