@@ -10,4 +10,17 @@
 
 @implementation BALoginViewController
 
+- (IBAction)loginButtonPressed:(id)sender {
+    // Validate username/password
+    // Push MainTabBarController
+}
+
+- (IBAction)loginWithFacebookPressed:(id)sender {
+    
+}
+
+- (IBAction)loginWithGooglePressed:(id)sender:(id)sender {
+    
+}
+
 @end
