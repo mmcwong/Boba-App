@@ -127,7 +127,7 @@ public class YelpAPI {
      * @param yelpApi    <tt>YelpAPI</tt> service instance
      * @param yelpApiCli <tt>YelpAPICLI</tt> command line arguments
      */
-    private static void queryAPI(YelpAPI yelpApi, YelpAPICLI yelpApiCli) {
+    private static List<Business> queryAPI(YelpAPI yelpApi, YelpAPICLI yelpApiCli) {
         String searchResponseJSON =
                 yelpApi.searchForBusinessesByLocation(yelpApiCli.term, yelpApiCli.location);
 
@@ -143,17 +143,17 @@ public class YelpAPI {
 
         JSONArray businesses = (JSONArray) response.get("businesses");
         List<Business> stores = getBusinessesFromJSON(businesses);
-
-        JSONObject firstBusiness = (JSONObject) businesses.get(0);
-        String firstBusinessID = firstBusiness.get("id").toString();
-        System.out.println(String.format(
-                "%s businesses found, querying business info for the top result \"%s\" ...",
-                businesses.size(), firstBusinessID));
-
-        // Select the first business and display business details
-        String businessResponseJSON = yelpApi.searchByBusinessId(firstBusinessID.toString());
-        System.out.println(String.format("Result for business \"%s\" found:", firstBusinessID));
-        System.out.println(businessResponseJSON);
+        return stores;
+//        JSONObject firstBusiness = (JSONObject) businesses.get(0);
+//        String firstBusinessID = firstBusiness.get("id").toString();
+//        System.out.println(String.format(
+//                "%s businesses found, querying business info for the top result \"%s\" ...",
+//                businesses.size(), firstBusinessID));
+//
+//        // Select the first business and display business details
+//        String businessResponseJSON = yelpApi.searchByBusinessId(firstBusinessID.toString());
+//        System.out.println(String.format("Result for business \"%s\" found:", firstBusinessID));
+//        System.out.println(businessResponseJSON);
     }
 
     private static List<Business> getBusinessesFromJSON(JSONArray jsonBusinesses) {
@@ -161,10 +161,23 @@ public class YelpAPI {
         for(Object obj : jsonBusinesses) {
             JSONObject jsonBusiness = (JSONObject)obj;
             String name = jsonBusiness.get("name").toString();
-            String phone = jsonBusiness.get("name").toString();
-            businesses.add(new Business(name, phone));
+            String phone = jsonBusiness.get("phone").toString();
+            String image = jsonBusiness.get("image_url").toString();
+            String address = getAddress(jsonBusiness.get("location"));
+            String rating = jsonBusiness.get("rating_img_url_large").toString();
+            businesses.add(new Business(name, phone, address, image, rating));
         }
         return businesses;
+    }
+
+    private static String getAddress(Object obj) {
+        JSONObject location = (JSONObject)obj;
+        JSONArray display_address = (JSONArray)location.get("display_address");
+        String address = "";
+        for (Object addressObj : display_address) {
+            address += addressObj + "\n";
+        }
+        return address;
     }
 
     /**
@@ -180,11 +193,11 @@ public class YelpAPI {
      * <p/>
      * After entering your OAuth credentials, execute <tt><b>run.sh</b></tt> to run this example.
      */
-    public static void run(String[] args) {
+    public static List<Business> run(String[] args) {
         YelpAPICLI yelpApiCli = new YelpAPICLI();
         new JCommander(yelpApiCli, args);
 
         YelpAPI yelpApi = new YelpAPI(CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET);
-        queryAPI(yelpApi, yelpApiCli);
+        return queryAPI(yelpApi, yelpApiCli);
     }
 }
