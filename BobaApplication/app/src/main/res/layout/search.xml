@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:queryHint="Enter a restaurant or food" />
 
-    <ListView
+    <com.fgtpw.bobaapplication.search.SearchListView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
