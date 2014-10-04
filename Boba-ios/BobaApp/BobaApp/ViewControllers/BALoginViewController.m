@@ -16,8 +16,8 @@
     // Validate username/password
     // Push MainTabBarController
     
-    UIStoryboard *tabBarStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    BAMainTabBarController *mainTabBarController = [tabBarStoryboard instantiateViewControllerWithIdentifier:@"BAMainTabBarController"];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    BAMainTabBarController *mainTabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"BAMainTabBarController"];
     
     [self presentViewController:(UIViewController *)mainTabBarController animated:YES completion:nil];
 }
