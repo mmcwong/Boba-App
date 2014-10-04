@@ -1,6 +1,7 @@
 package com.fgtpw.bobaapplication;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -32,7 +33,11 @@ public class MyRunsFragment extends Fragment {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Start search fragment
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .add(R.id.container, RestaurantMenuFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
