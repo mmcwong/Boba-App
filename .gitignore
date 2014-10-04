@@ -1,2 +1,5 @@
 Boba-ios/BobaApp/BobaApp.xcodeproj/project.xcworkspace/xcuserdata/*
 *.xcuserstate
+xcuserdata
+xcshareddata
+.DS_Store
