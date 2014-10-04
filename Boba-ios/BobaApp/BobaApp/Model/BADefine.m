@@ -10,4 +10,6 @@
 
 @implementation BADefine
 
+NSString *const kAPIBaseUrl = @"http://66.228.41.236/api/boba_app";
+
 @end

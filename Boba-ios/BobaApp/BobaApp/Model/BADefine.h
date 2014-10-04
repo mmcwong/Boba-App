@@ -10,4 +10,6 @@
 
 @interface BADefine : NSObject
 
+extern NSString *const kAPIBaseUrl;
+
 @end
