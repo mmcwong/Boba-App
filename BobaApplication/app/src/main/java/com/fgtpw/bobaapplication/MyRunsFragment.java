@@ -13,9 +13,6 @@ import android.widget.ListView;
 
 import java.util.List;
 
-/**
- * Created by sfung on 10/3/14.
- */
 public class MyRunsFragment extends Fragment {
 
     public static MyRunsFragment newInstance() {

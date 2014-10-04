@@ -12,9 +12,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by sfung on 10/4/14.
- */
 public class CurrentRunsAdapter extends BaseAdapter {
     List<String> data;
     Context context;
