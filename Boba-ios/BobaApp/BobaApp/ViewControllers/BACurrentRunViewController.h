@@ -1,5 +1,5 @@
 //
-//  BOCurrentRunViewController.h
+//  BACurrentRunViewController.h
 //  BobaApp
 //
 //  Created by Hyun Bin Kim on 2014-10-04.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BOCurrentRunViewController : UIViewController
+@interface BACurrentRunViewController : UIViewController
 
 @end
