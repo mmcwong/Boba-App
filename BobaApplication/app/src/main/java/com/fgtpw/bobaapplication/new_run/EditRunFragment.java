@@ -5,6 +5,7 @@ import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,16 +16,17 @@ import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
 import com.fgtpw.bobaapplication.R;
+import com.fgtpw.bobaapplication.run.RunDetailFragment;
 
 import java.util.Calendar;
 
-public class NewRunFragment extends Fragment {
+public class EditRunFragment extends Fragment {
 
     private static TextView endTimeTextView;
     public static final String RESTURANT_ARG = "resturant_name";
 
-    public static NewRunFragment newInstance(String resturantName) {
-        NewRunFragment fragment = new NewRunFragment();
+    public static EditRunFragment newInstance(String resturantName) {
+        EditRunFragment fragment = new EditRunFragment();
         Bundle args = new Bundle();
         args.putString(RESTURANT_ARG, resturantName);
         fragment.setArguments(args);
@@ -54,7 +56,11 @@ public class NewRunFragment extends Fragment {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // save to database
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .add(R.id.container, RunDetailFragment.getNewInstance())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         return linearLayout;

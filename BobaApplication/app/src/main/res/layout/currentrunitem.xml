@@ -7,37 +7,38 @@
     <ImageView
         android:id="@+id/currentrunitem_face"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
+        android:layout_weight="0.3333"
+        android:adjustViewBounds="true"/>
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
-        android:layout_weight="5"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6667">
         <TextView
             android:id="@+id/run_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="Boba"/>
+            android:text="Let's get Boba!"
+            android:textSize="20dp"/>
         <TextView
             android:id="@+id/restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:padding="5dp"
-            android:layout_toRightOf="@id/run_name"
-            android:text="Tearra"/>
+            android:text="Tea Era"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Remaining: "
+            android:layout_gravity="right"/>
         <TextView
             android:id="@+id/expiration_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/restaurant_name"
-            android:padding="5dp"
-            android:layout_alignLeft="@id/restaurant_name"
-            android:text="00:30 left"/>
-    </RelativeLayout>
+            android:text="00:30"
+            android:textSize="30dp"
+            android:layout_gravity="right"/>
+    </LinearLayout>
 
 </LinearLayout>

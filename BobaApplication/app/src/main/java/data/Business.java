@@ -14,12 +14,15 @@ public class Business {
     public final String address;
     public final Bitmap image;
     public final Bitmap rating;
+    public final String businessId;
 
-    public Business(String name,
+    public Business(String businessId,
+                    String name,
                     String phone,
                     String address,
                     String strImage,
                     String strRating) {
+        this.businessId = businessId;
         this.name = name;
         this.address = address;
         this.phone = formatPhone(phone);

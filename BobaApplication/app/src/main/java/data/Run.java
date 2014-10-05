@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Run {
+    private int RunId;
     private Business business;
     private User host;
     private Map<User, Order> participants;

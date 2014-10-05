@@ -1,4 +1,4 @@
-package com.fgtpw.bobaapplication;
+package com.fgtpw.bobaapplication.current_runs;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fgtpw.bobaapplication.HostOrderPageFragment;
+import com.fgtpw.bobaapplication.R;
+
 import java.util.List;
+
+import data.Run;
 
 public class CurrentRunsAdapter extends BaseAdapter {
     List<String> data;

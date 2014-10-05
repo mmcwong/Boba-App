@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import com.fgtpw.bobaapplication.R;
-import com.fgtpw.bobaapplication.new_run.NewRunFragment;
+import com.fgtpw.bobaapplication.new_run.EditRunFragment;
 
 import data.Business;
 
@@ -37,7 +37,7 @@ public class SearchFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
-                        .add(R.id.container, NewRunFragment.newInstance(((Business)searchListView.getItemAtPosition(i)).name))
+                        .add(R.id.container, EditRunFragment.newInstance(((Business) searchListView.getItemAtPosition(i)).name))
                         .addToBackStack(null)
                         .commit();
             }

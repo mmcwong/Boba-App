@@ -153,12 +153,13 @@ public class YelpAPI {
         List<Business> businesses = new ArrayList<Business>();
         for (Object obj : jsonBusinesses) {
             JSONObject jsonBusiness = (JSONObject) obj;
+            String id = get(jsonBusiness, "id");
             String name = get(jsonBusiness, "name");
             String phone = get(jsonBusiness, "phone");
             String image = get(jsonBusiness, "image_url");
             String address = getAddress(jsonBusiness.get("location"));
             String rating = get(jsonBusiness, "rating_img_url_large");
-            businesses.add(new Business(name, phone, address, image, rating));
+            businesses.add(new Business(id, name, phone, address, image, rating));
         }
         return businesses;
     }

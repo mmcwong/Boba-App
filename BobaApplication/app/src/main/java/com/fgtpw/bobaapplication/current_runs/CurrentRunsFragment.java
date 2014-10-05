@@ -1,4 +1,4 @@
-package com.fgtpw.bobaapplication;
+package com.fgtpw.bobaapplication.current_runs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
+
+import com.fgtpw.bobaapplication.R;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,8 @@ public class CurrentRunsFragment extends Fragment {
         ArrayList<String> data = new ArrayList<String>();
         data.add("Boba");
         data.add("Chicken");
+        DataManager dataManager = new DataManager(getActivity());
+        dataManager.getCurrentRuns();
         list.setAdapter(new CurrentRunsAdapter(data, getActivity(),getFragmentManager()));
         return root;
     }
