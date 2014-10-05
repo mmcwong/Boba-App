@@ -9,9 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * Created by sfung on 10/3/14.
- */
 public class HostOrderPageFragment extends Fragment {
 
     public static HostOrderPageFragment newInstance() {

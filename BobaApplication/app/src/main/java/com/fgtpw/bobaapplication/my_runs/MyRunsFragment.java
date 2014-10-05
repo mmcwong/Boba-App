@@ -1,4 +1,4 @@
-package com.fgtpw.bobaapplication;
+package com.fgtpw.bobaapplication.my_runs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.fgtpw.bobaapplication.R;
 import com.fgtpw.bobaapplication.search.SearchFragment;
 
 public class MyRunsFragment extends Fragment {

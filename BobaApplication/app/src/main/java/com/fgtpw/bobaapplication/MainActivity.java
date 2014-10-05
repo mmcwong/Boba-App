@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import com.fgtpw.bobaapplication.my_runs.MyRunsFragment;
+
 
 public class MainActivity extends FragmentActivity {
 

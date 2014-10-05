@@ -11,9 +11,6 @@ import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
 
-/**
- * Created by sfung on 10/3/14.
- */
 public class CurrentRunsFragment extends Fragment {
 
     public static CurrentRunsFragment newInstance() {

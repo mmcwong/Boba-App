@@ -3,13 +3,18 @@ package com.fgtpw.bobaapplication.search;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import com.fgtpw.bobaapplication.R;
+import com.fgtpw.bobaapplication.new_run.NewRunFragment;
+
+import data.Business;
 
 public class SearchFragment extends Fragment {
     private LinearLayout linearLayout;
@@ -26,6 +31,17 @@ public class SearchFragment extends Fragment {
         linearLayout = (LinearLayout)inflater.inflate(R.layout.search, container,false);
 
         final SearchListView searchListView = (SearchListView)linearLayout.findViewById(R.id.search_list_view);
+
+        searchListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .add(R.id.container, NewRunFragment.newInstance(((Business)searchListView.getItemAtPosition(i)).name))
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         SearchView searchView = (SearchView)linearLayout.findViewById(R.id.startrun_search);
         searchView.setIconified(false);

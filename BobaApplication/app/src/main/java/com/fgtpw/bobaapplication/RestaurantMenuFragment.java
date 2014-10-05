@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-/**
- * Created by sfung on 10/3/14.
- */
 public class RestaurantMenuFragment extends Fragment {
 
     public static RestaurantMenuFragment newInstance() {
