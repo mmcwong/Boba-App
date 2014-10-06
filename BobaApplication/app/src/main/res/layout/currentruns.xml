@@ -7,6 +7,10 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:dividerHeight="10dp"
+        android:headerDividersEnabled="true"
+        android:divider="@android:color/transparent"
         android:id="@+id/currentruns_list"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
