@@ -16,19 +16,24 @@ import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
 import com.fgtpw.bobaapplication.R;
+import com.fgtpw.bobaapplication.login.LoginManager;
 import com.fgtpw.bobaapplication.run.RunDetailFragment;
 
 import java.util.Calendar;
+
+import data.Business;
+import data.Run;
+import data.User;
 
 public class EditRunFragment extends Fragment {
 
     private static TextView endTimeTextView;
     public static final String RESTURANT_ARG = "resturant_name";
 
-    public static EditRunFragment newInstance(String resturantName) {
+    public static EditRunFragment newInstance(Business business) {
         EditRunFragment fragment = new EditRunFragment();
         Bundle args = new Bundle();
-        args.putString(RESTURANT_ARG, resturantName);
+        args.putSerializable(RESTURANT_ARG, business);
         fragment.setArguments(args);
         return fragment;
     }
@@ -38,8 +43,9 @@ public class EditRunFragment extends Fragment {
         Bundle args = getArguments();
         View linearLayout = inflater.inflate(R.layout.hostorder, container, false);
 
+        final Business currentBusiness = (Business)args.getSerializable(RESTURANT_ARG);
         TextView restaurantNameTextView = (TextView) linearLayout.findViewById(R.id.business_name);
-        restaurantNameTextView.setText(args.getString(RESTURANT_ARG));
+        restaurantNameTextView.setText(currentBusiness.name);
 
         endTimeTextView = (TextView) linearLayout.findViewById(R.id.order_end_time);
         endTimeTextView.setText(formatTime(getInitialTime()));
@@ -56,9 +62,11 @@ public class EditRunFragment extends Fragment {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User currentUser = LoginManager.getInstance().currentUser();
+                Run run = new Run(LoginManager.getInstance().currentUser(), currentBusiness, getInitialTime().getTime());
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
-                        .add(R.id.container, RunDetailFragment.getNewInstance())
+                        .add(R.id.container, RunDetailFragment.getNewInstance(run.runId, currentUser.userId))
                         .addToBackStack(null)
                         .commit();
             }

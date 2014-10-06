@@ -2,13 +2,13 @@ package data;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Business {
+public class Business implements Serializable{
     public final String name;
     public final String phone;
     public final String address;

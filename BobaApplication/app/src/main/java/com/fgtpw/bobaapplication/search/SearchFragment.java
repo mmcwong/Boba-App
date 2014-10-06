@@ -37,7 +37,7 @@ public class SearchFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
-                        .add(R.id.container, EditRunFragment.newInstance(((Business) searchListView.getItemAtPosition(i)).name))
+                        .add(R.id.container, EditRunFragment.newInstance(((Business) searchListView.getItemAtPosition(i))))
                         .addToBackStack(null)
                         .commit();
             }

@@ -5,13 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Run {
-    private int RunId;
-    private Business business;
-    private User host;
-    private Map<User, Order> participants;
-    private Date endTime;
+    public final int runId;
+    public final Business business;
+    public final User host;
+    public final Map<User, Order> participants;
+    public final Date endTime;
 
     public Run(User host, Business business, Date endTime) {
+        this.runId = 1;
         this.host = host;
         this.business = business;
         this.endTime = endTime;

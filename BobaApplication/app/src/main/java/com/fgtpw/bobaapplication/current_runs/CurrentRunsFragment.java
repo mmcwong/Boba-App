@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.fgtpw.bobaapplication.R;
+import com.fgtpw.bobaapplication.networking.DataManager;
 
 import java.util.ArrayList;
 

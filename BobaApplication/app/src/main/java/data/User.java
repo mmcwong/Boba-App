@@ -1,10 +1,10 @@
 package data;
 
 public class User {
-    private String name;
-    private String phone;
-    private String email;
-    private int userId;
+    public final String name;
+    public final String phone;
+    public final String email;
+    public final int userId;
 
     private static int userCount = 0;
 
