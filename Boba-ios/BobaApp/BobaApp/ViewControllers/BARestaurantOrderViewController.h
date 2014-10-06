@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BARestaurantOrderViewController : UIViewController
+@interface BARestaurantOrderViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *orderTimeButton;
 @property (weak, nonatomic) IBOutlet UITableView *restaurantOrderTableView;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BAMyRunViewController : UIViewController
+@interface BAMyRunsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *myRunsTableView;
 @property (weak, nonatomic) IBOutlet UIButton *startRunButton;

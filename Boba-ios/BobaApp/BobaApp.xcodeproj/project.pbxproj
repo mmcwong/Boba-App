@@ -23,7 +23,7 @@
 		481A2F7E19DFD46800BF4FC7 /* BALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F7D19DFD46800BF4FC7 /* BALoginViewController.m */; };
 		481A2F8119DFD48200BF4FC7 /* BAMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8019DFD48200BF4FC7 /* BAMainTabBarController.m */; };
 		481A2F8419DFD49100BF4FC7 /* BACurrentRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8319DFD49100BF4FC7 /* BACurrentRunViewController.m */; };
-		481A2F8719DFD4A000BF4FC7 /* BAMyRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8619DFD4A000BF4FC7 /* BAMyRunViewController.m */; };
+		481A2F8719DFD4A000BF4FC7 /* BAMyRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8619DFD4A000BF4FC7 /* BAMyRunsViewController.m */; };
 		481A2F8A19DFD4BC00BF4FC7 /* BARunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8919DFD4BC00BF4FC7 /* BARunDetailViewController.m */; };
 		481A2F8D19DFD4CE00BF4FC7 /* BAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8C19DFD4CE00BF4FC7 /* BAMenuViewController.m */; };
 		481A2F9019DFD4DF00BF4FC7 /* BAPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A2F8F19DFD4DF00BF4FC7 /* BAPeopleViewController.m */; };
@@ -32,6 +32,9 @@
 		E71881F619DFE98C00F155E0 /* BARestaurantSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881F519DFE98C00F155E0 /* BARestaurantSearchViewController.m */; };
 		E71881F919DFE9A500F155E0 /* BARestaurantOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881F819DFE9A500F155E0 /* BARestaurantOrderViewController.m */; };
 		E71881FE19DFFE8800F155E0 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E71881FD19DFFE8800F155E0 /* Helpers.m */; };
+		E718820719E21CFA00F155E0 /* BACurrentRunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E718820619E21CFA00F155E0 /* BACurrentRunTableViewCell.m */; };
+		E718820A19E2243C00F155E0 /* BAMyRunsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E718820919E2243C00F155E0 /* BAMyRunsTableViewCell.m */; };
+		E718820D19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E718820C19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +79,8 @@
 		481A2F8019DFD48200BF4FC7 /* BAMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAMainTabBarController.m; path = ViewControllers/BAMainTabBarController.m; sourceTree = "<group>"; };
 		481A2F8219DFD49100BF4FC7 /* BACurrentRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BACurrentRunViewController.h; path = ViewControllers/BACurrentRunViewController.h; sourceTree = "<group>"; };
 		481A2F8319DFD49100BF4FC7 /* BACurrentRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BACurrentRunViewController.m; path = ViewControllers/BACurrentRunViewController.m; sourceTree = "<group>"; };
-		481A2F8519DFD4A000BF4FC7 /* BAMyRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMyRunViewController.h; path = ViewControllers/BAMyRunViewController.h; sourceTree = "<group>"; };
-		481A2F8619DFD4A000BF4FC7 /* BAMyRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAMyRunViewController.m; path = ViewControllers/BAMyRunViewController.m; sourceTree = "<group>"; };
+		481A2F8519DFD4A000BF4FC7 /* BAMyRunsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMyRunsViewController.h; path = ViewControllers/BAMyRunsViewController.h; sourceTree = "<group>"; };
+		481A2F8619DFD4A000BF4FC7 /* BAMyRunsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAMyRunsViewController.m; path = ViewControllers/BAMyRunsViewController.m; sourceTree = "<group>"; };
 		481A2F8819DFD4BC00BF4FC7 /* BARunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BARunDetailViewController.h; path = ViewControllers/BARunDetailViewController.h; sourceTree = "<group>"; };
 		481A2F8919DFD4BC00BF4FC7 /* BARunDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARunDetailViewController.m; path = ViewControllers/BARunDetailViewController.m; sourceTree = "<group>"; };
 		481A2F8B19DFD4CE00BF4FC7 /* BAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMenuViewController.h; path = ViewControllers/BAMenuViewController.h; sourceTree = "<group>"; };
@@ -93,6 +96,12 @@
 		E71881F819DFE9A500F155E0 /* BARestaurantOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARestaurantOrderViewController.m; path = ViewControllers/BARestaurantOrderViewController.m; sourceTree = "<group>"; };
 		E71881FC19DFFE8800F155E0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = Helpers/Helpers.h; sourceTree = "<group>"; };
 		E71881FD19DFFE8800F155E0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = Helpers/Helpers.m; sourceTree = "<group>"; };
+		E718820519E21CFA00F155E0 /* BACurrentRunTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BACurrentRunTableViewCell.h; path = View/BACurrentRunTableViewCell.h; sourceTree = "<group>"; };
+		E718820619E21CFA00F155E0 /* BACurrentRunTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BACurrentRunTableViewCell.m; path = View/BACurrentRunTableViewCell.m; sourceTree = "<group>"; };
+		E718820819E2243C00F155E0 /* BAMyRunsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMyRunsTableViewCell.h; path = View/BAMyRunsTableViewCell.h; sourceTree = "<group>"; };
+		E718820919E2243C00F155E0 /* BAMyRunsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAMyRunsTableViewCell.m; path = View/BAMyRunsTableViewCell.m; sourceTree = "<group>"; };
+		E718820B19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BARestaurantMenuTableViewCell.h; path = View/BARestaurantMenuTableViewCell.h; sourceTree = "<group>"; };
+		E718820C19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARestaurantMenuTableViewCell.m; path = View/BARestaurantMenuTableViewCell.m; sourceTree = "<group>"; };
 		F313D71261BA4AD6378D0641 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,8 +218,8 @@
 				481A2F8019DFD48200BF4FC7 /* BAMainTabBarController.m */,
 				481A2F8219DFD49100BF4FC7 /* BACurrentRunViewController.h */,
 				481A2F8319DFD49100BF4FC7 /* BACurrentRunViewController.m */,
-				481A2F8519DFD4A000BF4FC7 /* BAMyRunViewController.h */,
-				481A2F8619DFD4A000BF4FC7 /* BAMyRunViewController.m */,
+				481A2F8519DFD4A000BF4FC7 /* BAMyRunsViewController.h */,
+				481A2F8619DFD4A000BF4FC7 /* BAMyRunsViewController.m */,
 				481A2F8819DFD4BC00BF4FC7 /* BARunDetailViewController.h */,
 				481A2F8919DFD4BC00BF4FC7 /* BARunDetailViewController.m */,
 				481A2F8B19DFD4CE00BF4FC7 /* BAMenuViewController.h */,
@@ -253,6 +262,12 @@
 		E71881FA19DFFD7400F155E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E718820519E21CFA00F155E0 /* BACurrentRunTableViewCell.h */,
+				E718820619E21CFA00F155E0 /* BACurrentRunTableViewCell.m */,
+				E718820819E2243C00F155E0 /* BAMyRunsTableViewCell.h */,
+				E718820919E2243C00F155E0 /* BAMyRunsTableViewCell.m */,
+				E718820B19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.h */,
+				E718820C19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -402,11 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E718820719E21CFA00F155E0 /* BACurrentRunTableViewCell.m in Sources */,
 				481A2F8A19DFD4BC00BF4FC7 /* BARunDetailViewController.m in Sources */,
 				4807DFCA19DFD6D100D9C4D6 /* BABobaRun.m in Sources */,
 				E71881F619DFE98C00F155E0 /* BARestaurantSearchViewController.m in Sources */,
 				E71881FE19DFFE8800F155E0 /* Helpers.m in Sources */,
 				481A2F5E19DFD19400BF4FC7 /* ViewController.m in Sources */,
+				E718820D19E22DFB00F155E0 /* BARestaurantMenuTableViewCell.m in Sources */,
 				4807DFD619DFE16C00D9C4D6 /* BADefine.m in Sources */,
 				481A2F8419DFD49100BF4FC7 /* BACurrentRunViewController.m in Sources */,
 				481A2F7E19DFD46800BF4FC7 /* BALoginViewController.m in Sources */,
@@ -420,7 +437,8 @@
 				481A2F8D19DFD4CE00BF4FC7 /* BAMenuViewController.m in Sources */,
 				4807DFD019DFDFAD00D9C4D6 /* BAProfileManager.m in Sources */,
 				481A2F9019DFD4DF00BF4FC7 /* BAPeopleViewController.m in Sources */,
-				481A2F8719DFD4A000BF4FC7 /* BAMyRunViewController.m in Sources */,
+				E718820A19E2243C00F155E0 /* BAMyRunsTableViewCell.m in Sources */,
+				481A2F8719DFD4A000BF4FC7 /* BAMyRunsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

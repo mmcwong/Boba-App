@@ -12,6 +12,7 @@
 @implementation BARunDetailViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 @end
